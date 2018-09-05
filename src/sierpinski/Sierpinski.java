@@ -48,4 +48,29 @@ public class Sierpinski
 	// Si llegue hasta aca, el numero es solo divisible por 1 y si mismo.
 	return true;
     }
+    
+    static public boolean esFactorial(double sierp)
+    {
+	int i = 2;
+
+	while (sierp > 1)
+	{
+	    if (sierp % i == 0)
+	    {
+		sierp /= i;
+	    } else
+	    {
+		break;
+	    }
+
+	    i++;
+	}
+
+	if (sierp > 1)
+	{
+	    return false;
+	}
+
+	return true;
+    }
 }
